@@ -22,7 +22,7 @@ RUN apk update -qq \
     && apk add ca-certificates wget curl bash tini \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
 
-#COPY entrypoint.sh              /entrypoint.sh
+COPY entrypoint.sh              /entrypoint.sh
 
 ARG BAMBOO_VERSION=6.2.1
 ARG DOWNLOAD_URL=https://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-${BAMBOO_VERSION}.tar.gz
